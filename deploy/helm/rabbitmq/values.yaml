@@ -1,0 +1,14 @@
+replicaCount: 1
+
+image:
+  repository: rabbitmq
+  tag: 3.10.5-management
+  pullPolicy: IfNotPresent
+
+service:
+  name: rabbitmq
+  type: ClusterIP
+  externalPort: 15672
+  amqpPort: 5672
+
+resources: {}
